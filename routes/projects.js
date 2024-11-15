@@ -1,8 +1,8 @@
 const express = require("express");
-const { authenticateToken } = require("../AuthServer/AuthToken");
+const { authenticateToken } = require("../Authentication/AuthToken");
 const router = express.Router();
 const { Data, User } = require("../dbConfigs/dbConnect");
-const { authorizeRole } = require("../AuthServer/AuthToken");
+const { authorizeRole } = require("../Authentication/AuthToken");
 
 router.get("/get-all-projects", authenticateToken, async (req, res) => {
   Data.find({}).then((data) => {

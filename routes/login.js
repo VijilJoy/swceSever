@@ -3,7 +3,8 @@ const router = express.Router();
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const { User } = require("../dbConfigs/dbConnect");
-const JWT_SECRET = require("../tokenSecrete").ACCESS_TOKEN_SECRET;
+const JWT_SECRET =
+  require("../Authentication/tokenSecrete").ACCESS_TOKEN_SECRET;
 
 router.post("/login", async (req, res) => {
   try {

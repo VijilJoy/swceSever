@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { authenticateToken } = require("../AuthServer/AuthToken");
+const { authenticateToken } = require("../Authentication/AuthToken");
 router.get("/users", authenticateToken, async (req, res) => {
   try {
     dataEntries = await User.find({}); // Return users data
