@@ -18,7 +18,7 @@ app.use(projects);
 app.use(search);
 
 dbConnect();
-app.listen(4000, () => {
+app.listen(3000, () => {
   console.log("Connected to db");
   console.log("Server running...");
 });
